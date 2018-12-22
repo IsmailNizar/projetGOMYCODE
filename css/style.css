@@ -1,0 +1,517 @@
+@font-face{
+	src: url("../fonts/Mentega.ttf");
+	font-family: mentega;
+}
+@font-face{
+	src: url("../fonts/Wild\ Nature.ttf");
+	font-family: wild;
+}
+@keyframes push {
+    0%   { left: 100px; top: -40px;}
+    50%  { left: 60%; top: -40px;}
+    100% { left: 100px; top: -40px;}
+  }
+  @keyframes push2 {
+    0%   { left: 50px; top: -40px;}
+    50%  { left: 350px; top: -40px;}
+    100% { left: 50px; top: -40px;}
+  }
+*{
+    margin: 0;
+    padding: 0;  
+}
+body{
+    background-image: url('../res/188884.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 1000px;
+    width: 90%;
+    padding-left: 10%;
+}
+/***************************** Header  ********************************/
+.header {
+    width: 100%;
+    height: 200px;
+
+}
+.header hr {
+    width: 80%;
+    margin: auto;
+    border-color: white;
+}
+.top-header{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.top-header img{
+    width: 40%;
+    height: 100px;
+    margin-left: 30%;
+    margin-top: 10px;
+}
+.menu-header{
+    width: 100%;
+    height: 80px;
+}
+.menu-header{
+    width: fit-content;
+    margin: auto;
+    height: 60px;
+}
+.menu-header ul{
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    list-style: none;
+
+}
+.menu-header ul li{
+font-size: 1.5em;
+margin-top: 18px;
+margin-left: 20px;
+cursor: pointer;
+font-family: 'Times New Roman', Times, serif;
+text-shadow: 1px 1px 1px black;
+}
+.menu-header ul li:hover{
+color: rgba(0, 132, 255, 0.795);
+text-decoration: underline;
+}
+.menu-header ul a{
+text-decoration: none;
+color: white;
+    }
+/************* Sticky *************/
+.sticky {
+  position: fixed;
+  top: 30px;
+  left: 0px;
+  width: 20px;
+  height: 210px;
+background-color: rgba(126, 123, 123, 0.568);
+overflow: hidden;
+transition: all 0.1s ease-in-out;
+}
+.sticky ul li {
+    color: white;
+}
+.sticky ul li:hover {
+    color: rgba(0, 132, 255, 0.795);
+}
+.sticky:hover{
+    width: 150px;
+}
+/***************************** Container  ********************************/
+/************* WELCOME *************/
+.Welcome{
+position: relative;
+width: 100%;
+height: 550px;
+background-color:rgba(0, 0, 0, 0.733);
+background-image: url('../res/783472.jpg');
+background-size: cover;
+box-shadow: 2px 2px 2px #222 ; 
+
+}
+.anim{
+    position: absolute;
+	top: -40px;
+	left: 100px;
+	width: 400px;
+	height: 100px;
+animation: push ease 15s alternate infinite;
+    animation-delay: 1.5s;
+}
+.Welcome h2{
+    color: white;
+    font-size: 5em;
+    font-weight: 500;
+    text-align: center;
+    padding-top: 70px;
+    font-family: mentega;
+    text-shadow: 1px 1px 1px white;
+
+    }
+.Welcome button{
+    position: absolute;
+    right: 40%;
+    bottom: 20%;
+        font-family: 'Times New Roman', Times, serif;
+        color:white;
+        font-size: 1.5em;
+        font-weight: 400;
+        transform: rotate(350deg);
+        width: 30%;
+        height: 40px; 
+        background-color: rgba(0, 132, 255, 0.795);  
+        border-color: rgba(0, 132, 255, 0.795);  
+        cursor: pointer;
+}
+.Welcome button:hover{
+    color: black;
+    background-color: rgba(255, 255, 255, 0.575);
+    border-color: black; 
+    transform: rotate(360deg);
+    transition: all 2s;
+}
+ /************* ABOUT US *************/   
+.about-us{
+width: 100%;
+height: 700px;
+text-align: center;
+
+
+}
+.about-us h2{
+    color: white;
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/************* GAMES *************/
+.games{
+width: 100%;
+height: 1400px;
+display: flex;
+flex-wrap: wrap;
+}
+.tittle{
+    width: 100%;
+    height: 100px;
+}
+.games h2{
+    color: white;
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.game-info{
+position: relative;
+width: 30%;
+height: 400px;
+margin: 1%;
+background-color: #fff;
+box-shadow: 2px 2px 2px #222;
+background-color: rgba(181, 209, 221, 0.623);
+}
+.game-img{
+    width: 100%;
+    height: 100%;
+}
+.game-img img{
+    width: 100%;
+    height: 100%;
+}
+.game-description{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    
+}
+.game-description h3{
+    color: #EFFFE9;
+    font-size: 2em;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px 10px;
+    text-align: center;
+
+}
+.game-description p{
+    margin: 15px;
+    font-size: 1.5em;
+    color: #222;
+}
+#trailer{
+    display: block;
+    margin: 20px auto;
+    width: 55%;
+    border: 1px solid rgba(0, 0, 0, 0.63);
+    background-color: rgb(0, 102, 255);
+}
+#trailer:hover{
+    background-color: rgb(179, 199, 230);
+}
+.games a{
+    text-decoration: none;
+}
+
+/***** OVERLAY *****/
+/*.games div p {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 113px;
+    color: white;
+    font-weight: 400;
+
+
+/************* CONTACT *************/
+.contact{
+width: 80%;
+margin: auto;
+height: 700px;
+
+}
+.contact-photo{
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+.contact-photo img{
+    width: 70%;
+    margin: 20% 20% 15px;
+    height: 50%;
+    box-shadow: 3px 3px 3px #222;
+}
+.contact-photo img:hover{
+    transform: rotateY(360deg);
+    transition: all 8s;
+}
+.contact-photo h3{
+    text-align: center;
+    color: #2EC4B6;
+    font-size: 2.5em;
+    font-weight: bold;
+   cursor: pointer; 
+ }
+ .contact-photo a{
+     text-decoration: none;
+ }
+ .contact-photo h3:hover{
+     text-decoration: underline;
+     color: rgba(24, 136, 125, 0.836);
+ }
+ .contact-photo p {
+     text-align: center;
+     color: #EFFFE9;
+     font-size: 2em;
+     cursor: default;
+  }
+.contact-form{
+    width: 60%;
+    height: 100%;
+    float: right;
+
+}
+.contact-form h2{
+    color: #EFFFE9;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.contact-form p{
+    color: #E71D36;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 25px;
+    line-height: 0px;  
+}
+.contact-form form{
+    margin-top: 40px;
+}
+#button{
+    background-color: rgb(0, 102, 255);
+}
+#button:hover{
+    background-color: rgb(179, 199, 230);
+
+}
+.contact-form input , .contact-form textarea {
+    display: block;
+    margin: 10px auto;
+    width: 55%;
+    border: 1px solid rgba(0, 0, 0, 0.63);
+    background-color: rgba(255, 255, 255, 0.575);
+}
+
+
+
+/***************************** Footer  ********************************/
+footer{
+width: 100%;
+height: 100px;
+}
+.social-media{
+    width: 100%;
+    height: 50px;
+    }
+.links{
+    width: fit-content;
+    margin: auto;
+    padding-top: 9px;
+}
+.links img{
+    margin-right: 10px;
+    cursor: pointer;
+}
+.links img:hover{
+    transform: rotate(360deg);
+  transition: all 1s;
+}
+.footer-info{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.733);
+    }  
+.footer-info p{
+    color: #EFFFE9;
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    }    
+
+
+/*********** medium screen ***********/
+@media (max-width: 1090px){
+.anim{
+left: 50px;
+animation: push2 ease 10s alternate infinite;
+}
+.games{
+height: 2000px;
+}
+.Welcome h2{
+ text-align: center;
+}
+.contact{
+width: 100%;
+}
+/********* about **********/
+.about-us{
+    height: 600px;   
+    }
+.competence img{
+    width: 80%;
+}
+.comp-logo{
+    height: 300px;
+}
+}
+/******* Animation *****/
+@media ( max-width: 960px){
+    .Welcome button{
+        font-size: 1.1em;
+        width: 35%;
+}
+    .anim{
+    animation: none;
+    width: 100%;
+    left: 0px;
+    }
+    .Welcome h2{
+        padding-top: 220px;
+        font-size: 4em;
+       }
+}
+/*********** Small screen ***********/
+@media (max-width: 750px){
+    .Welcome button{
+        font-size: 1em;
+        width: 35%;
+        bottom: 10%;    
+}
+.top-header h1{
+    font-family: wild;
+    font-size: 2.5em;
+    margin-left: 5%;
+    margin-top: 28px;
+    transform: rotate(347deg);
+}
+.Welcome{
+height: 250px;
+}
+.Welcome h2{
+ padding-top: 105px;
+ font-size: 2.5em;
+}
+.sticky {
+display: none;
+  }
+
+.menu-header ul li{
+font-size: 1em;
+margin-top: 15px;
+margin-left: 10px;
+}
+.anim{
+    position: absolute;
+	top: -40px;
+	left: 0px;
+	width: 100%;
+	height: 100px;
+animation: none;
+
+}
+.games h2{
+    font-size: 2em;
+}
+.games div p {
+    font-size: 0.75em;
+}
+
+/********* about **********/
+.comp-logo{
+    height: 200px;
+}
+.about-us{
+
+width: 100%;
+height: 410px;
+text-align: center;
+
+}
+.about-us h2{
+    font-size: 2em;
+}
+.education h3 , .competence h3{
+    font-size: 1.25em;
+}
+.education ul li , .competence ul li {
+    font-size: .95em; 
+}
+p{
+    font-size: 0.7em;
+}
+.competence img{
+    width: 80%;
+}
+.competence h4{
+    font-size: 1em;
+}
+
+
+.contact-photo img{
+    width: 80%;
+    margin: 35% 10% 15px;
+    height: 40%;
+    box-shadow: 3px 3px 3px #222;
+}
+.contact-form input , .contact-form textarea {
+    width: 75%;
+}
+.contact-form h2{
+    font-size: 1em;
+}
+
+
+
+}
+
+
+
+

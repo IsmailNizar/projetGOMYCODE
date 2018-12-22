@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css"> 
+    <link rel="icon" type="image/png" href="res/JOKG-Con.png">
+    <title>JUST FOR GAMER</title>
+</head>
+<body>
+    <header class="header" id="up">
+     <div class="top-header">
+      <img src="res/JOKG-Con.png" alt="">
+     </div> 
+     <hr>
+     <div class="menu-header" id="myHeader">
+      <ul>
+         <a href="#up"><li>HOME</li></a> 
+         <a href="#about"><li>ABOUT US</li></a>
+         <a href="#port"><li>GAMES</li></a>
+         <a href="#contactme"><li>CONTACT</li></a>
+      </ul>
+
+     </div>
+
+    </header>
+    <div class="main-container">
+      <div class="Welcome">
+        <div class="anim">
+        <h2>We Are Presenting For You The Greatest Games  !</h2>
+      </div>
+      <a href="#port"><button>Discover More Games</button></a>
+      </div>
+      
+      <div class="about-us" id="about">
+       <h2>ABOUT US</h2>
+       
+      </div>
+
+      <div class="games" id="port" >
+         <div class="tittle">
+          <h2>GAMES</h2>
+        </div>
+          <div class="game-info" onmouseover="show('#assassin-img','#assassin-descp')" onmouseout="hide('#assassin-img','#assassin-descp')">
+           <div class="game-img" id="assassin-img">
+             <img src="res/assassin creed.png" alt="">
+           </div>
+           <div class="game-description" id="assassin-descp">
+              <h3>Assassin's Creed Unity</h3>
+              <p>Is an action-adventure stealth game set in an open world environment. The game was meant to be rebuilt, with fencing being used as an inspiration for the new system.</p>
+              <a href="https://www.youtube.com/watch?v=3jbLIkITRow" target="_blank"><button class="btn btn-primary" id="trailer">Watch Trailer</button></a>
+           </div>
+          </div>
+
+          <div class="game-info" onmouseover="show('#fortnite-img','#fortnite-descp')" onmouseout="hide('#fortnite-img','#fortnite-descp')">
+            <div class="game-img" id="fortnite-img">
+              <img src="res/fortnite.jpg" alt="">
+            </div>
+            <div class="game-description" id="fortnite-descp">
+              <h3>Fortnite Battle Royal</h3>
+              <p>Is a competitive shooter between 100 players as they air-drop out of a moving plane, then fight to survive as the play space slowly shrinks to force people into combat .</p>
+              <a href="https://www.youtube.com/watch?v=2gUtfBmw86Y" target="_blank"><button class="btn btn-primary" id="trailer">Watch Trailer</button></a>
+            </div>
+          </div>
+
+          <div class="game-info" onmouseover="show()" onmouseout="hide()">
+            <div class="game-img">
+              <img src="res/csGo.jpg" alt="">
+            </div>
+            <div class="game-description">
+             <h3>Counter-Strike: Global Offensive</h3>
+            </div>
+          </div>
+
+          <div class="game-info" onmouseover="show()" onmouseout="hide()">
+            <div class="game-img">
+
+            </div>
+            <div class="game-description">
+ 
+            </div>
+          </div>
+
+          <div class="game-info" onmouseover="show()" onmouseout="hide()">
+            <div class="game-img">
+
+            </div>
+            <div class="game-description">
+ 
+            </div>
+          </div>
+
+          <div class="game-info" onmouseover="show()" onmouseout="hide()">
+            <div class="game-img">
+
+            </div>
+            <div class="game-description">
+ 
+            </div>
+          </div>
+
+          <div class="game-info" onmouseover="show()" onmouseout="hide()">
+            <div class="game-img">
+
+            </div>
+            <div class="game-description">
+ 
+            </div>
+          </div>
+
+          <div class="game-info" onmouseover="show()" onmouseout="hide()">
+            <div class="game-img">
+
+            </div>
+            <div class="game-description">
+ 
+            </div>
+          </div>
+          <div class="game-info" onmouseover="show()" onmouseout="hide()">
+
+          </div>
+ 
+       </div>
+
+       <div class="contact" id="contactme">
+          <div class="contact-photo">
+            <img src="res/gamers.jpg" alt="Me" title="Ismail" class="img-circle">
+            <h3 routerLink="/">GAMERS</h3>
+             <p>Community</p>
+          </div>
+          <div class="contact-form">
+            <h2>CONTACT</h2>
+            <p>Sousse , Tunisie</p>
+            <p>gamer.community@gaming.com</p>
+            <p>+216 ** *** ***</p>
+            <form >
+            <input type="text" title="Your Name" placeholder="Name " id="name" >
+            <input type="email" title="Your Email" placeholder="Email" id="email"  >
+            <input type="text" title="Object" placeholder="Object " id="object" >
+            <textarea id="Message" cols="30" rows="8" placeholder="Message "></textarea>
+          <input type="reset" value="Clear" class="btn btn-primary" id="button">
+        </form>
+        <input type="submit" value="Send" class="btn btn-primary" id="button" onclick="upload()">
+          </div>
+       </div>
+    </div>
+    
+    <footer>
+     <div class="social-media">
+       <div class="links">
+           <img src="res/facebook-logo.png" alt="facebook" title="Facebook" >
+           <img src="res/instagram.png" alt="instagram" title="instagram">
+           <img src="res/twitter.png" alt="twitter" title="twitter">
+           <img src="res/twitch.png" alt="twitch" title="twitch">
+           
+
+       </div>
+     </div>
+     <div class="footer-info">
+        ​<p>©2018-2019 by JustGamers .</p>
+     </div>
+
+    </footer>
+</body> 
+<script src="js/bootstrap.js"></script>  
+<script src="js/main.js"></script>
+</html>
