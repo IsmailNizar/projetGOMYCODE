@@ -1,10 +1,22 @@
 @font-face{
-	src: url("../fonts/Mentega.ttf");
-	font-family: mentega;
+	src: url("../fonts/game_sans_serif_7.ttf");
+	font-family: game;
 }
 @font-face{
 	src: url("../fonts/Wild\ Nature.ttf");
 	font-family: wild;
+}
+@font-face{
+    src: url("../fonts/ARCADE.TTF");
+    font-family: arcade;
+}
+@font-face{
+    src: url("../fonts/neuropol\ x\ rg.ttf");
+    font-family: neuro;
+}
+@font-face{
+    src: url("../fonts/Games.ttf    ");
+    font-family: gomar;
 }
 @keyframes push {
     0%   { left: 100px; top: -40px;}
@@ -21,7 +33,7 @@
     padding: 0;  
 }
 body{
-    background-image: url('../res/188884.jpg');
+    background-image: url('../res/unnamed.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 1000px;
@@ -32,12 +44,6 @@ body{
 .header {
     width: 100%;
     height: 200px;
-
-}
-.header hr {
-    width: 80%;
-    margin: auto;
-    border-color: white;
 }
 .top-header{
     width: 100%;
@@ -52,31 +58,49 @@ body{
     margin-top: 10px;
 }
 .menu-header{
-    width: 100%;
-    height: 80px;
-}
-.menu-header{
-    width: fit-content;
+    position: relative;
+    width: 80%;
     margin: auto;
     height: 60px;
+    background-color: rgba(34, 34, 34, 0.342);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu-header img {
+    display: none;
+}
+.login{
+position: absolute;
+right: 20px;
+width: fit-content;
+font-size: 1.5em;
+margin-top: 15px;
+color: white;
+cursor: pointer;
+text-shadow: 1px 1px 1px black; 
+font-family: gomar; 
+}
+.login p:hover{
+    color: rgb(95, 21, 30);
+    text-decoration: underline; 
 }
 .menu-header ul{
     display: flex;
     flex-wrap: wrap;
     color: black;
     list-style: none;
-
 }
 .menu-header ul li{
 font-size: 1.5em;
 margin-top: 18px;
 margin-left: 20px;
 cursor: pointer;
-font-family: 'Times New Roman', Times, serif;
+font-family: gomar;
 text-shadow: 1px 1px 1px black;
 }
 .menu-header ul li:hover{
-color: rgba(0, 132, 255, 0.795);
+color: rgb(95, 21, 30);
 text-decoration: underline;
 }
 .menu-header ul a{
@@ -94,14 +118,45 @@ background-color: rgba(126, 123, 123, 0.568);
 overflow: hidden;
 transition: all 0.1s ease-in-out;
 }
+.sticky:hover{
+    width: 150px;
+}
 .sticky ul li {
     color: white;
 }
 .sticky ul li:hover {
-    color: rgba(0, 132, 255, 0.795);
+    color: rgb(95, 21, 30);
 }
-.sticky:hover{
-    width: 150px;
+
+/************* login *************/
+.login-auth{
+position: absolute;
+right: 0;
+top: 0;
+width: 18%;
+height: 200px;
+background-color: rgba(0, 0, 0, 0.733);
+box-shadow: 2px 2px 2px #222;
+display: none;
+}
+.login-auth input{
+    width: 80%;
+    margin: 10% 10% 1%;
+    background-color: rgba(255, 255, 255, 0.781);
+}
+.login-auth button{
+    width: 40%;
+    margin: 8% 4%;
+    background-color: rgb(95, 21, 30);
+    border-color: rgb(95, 21, 30);
+    transition: all 0.5s ;
+    font-family: arcade;
+    font-size: 1.6em;
+}
+.login-auth button:hover{
+    color: black;
+    background-color: rgba(255, 255, 255, 0.795);
+    border-color: rgba(255, 255, 255, 0.795); 
 }
 /***************************** Container  ********************************/
 /************* WELCOME *************/
@@ -113,7 +168,6 @@ background-color:rgba(0, 0, 0, 0.733);
 background-image: url('../res/783472.jpg');
 background-size: cover;
 box-shadow: 2px 2px 2px #222 ; 
-
 }
 .anim{
     position: absolute;
@@ -121,48 +175,47 @@ box-shadow: 2px 2px 2px #222 ;
 	left: 100px;
 	width: 400px;
 	height: 100px;
-animation: push ease 15s alternate infinite;
+    animation: push ease 15s alternate infinite;
     animation-delay: 1.5s;
 }
 .Welcome h2{
     color: white;
-    font-size: 5em;
+    font-size: 3.4em;
     font-weight: 500;
     text-align: center;
     padding-top: 70px;
-    font-family: mentega;
-    text-shadow: 1px 1px 1px white;
+    font-family: neuro;
+    text-shadow: 3px 3px 3px grey;
 
     }
 .Welcome button{
     position: absolute;
     right: 40%;
     bottom: 20%;
-        font-family: 'Times New Roman', Times, serif;
-        color:white;
-        font-size: 1.5em;
-        font-weight: 400;
-        transform: rotate(350deg);
-        width: 30%;
-        height: 40px; 
-        background-color: rgba(0, 132, 255, 0.795);  
-        border-color: rgba(0, 132, 255, 0.795);  
-        cursor: pointer;
+    font-family: arcade;
+    color:white;
+    font-size: 2em;
+    font-weight: 400;
+    transform: rotate(350deg);
+    width: 30%;
+    height: 40px; 
+    background-color: rgba(0, 132, 255, 0.795);  
+    border-color: rgba(0, 132, 255, 0.795);  
+    cursor: pointer;
 }
 .Welcome button:hover{
     color: black;
-    background-color: rgba(255, 255, 255, 0.575);
-    border-color: black; 
+    background-color: rgba(255, 255, 255, 0.795);
+    border-color: rgba(255, 255, 255, 0.795); 
     transform: rotate(360deg);
     transition: all 2s;
 }
  /************* ABOUT US *************/   
 .about-us{
+position: relative;
 width: 100%;
-height: 700px;
+height: 750px;
 text-align: center;
-
-
 }
 .about-us h2{
     color: white;
@@ -170,9 +223,55 @@ text-align: center;
     font-weight: bold;
     text-align: center;
     padding-top: 10px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: neuro;
+}
+.motivation{
+width: 100%;    
+height: 90%;
+}
+.about-desc{
+position: absolute;
+bottom: 1%;
+left: 3%;
+width: 94%;
+height: fit-content;
+background: rgba(0, 0, 0, 0.5);
+color: #f1f1f1;
+padding: 15px;
+}
+.about-desc h3{
+    color: #E71D36;
+    font-family: arcade;
+    font-size: 3em;
+    text-align: left;
+}
+.about-desc p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4em;
+    text-align: left;
+    padding: 10px;
+    line-height: 20px;  
 }
 
+#myBtn {
+  width: 200px;
+  font-size: 2.2em;
+  padding: 10px;
+  border: none;
+  background: rgb(32, 32, 32);
+  color: #fff;
+  cursor: pointer;
+  font-family: arcade;
+  transition: all 0.5s;
+}
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+#myVideo {
+    width: 100%;
+    height: 100%;
+}
 
 /************* GAMES *************/
 .games{
@@ -191,7 +290,7 @@ flex-wrap: wrap;
     font-weight: bold;
     text-align: center;
     padding-top: 10px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: neuro;
 }
 .game-info{
 position: relative;
@@ -202,13 +301,10 @@ background-color: #fff;
 box-shadow: 2px 2px 2px #222;
 background-color: rgba(181, 209, 221, 0.623);
 }
-.game-img{
+.game-img , .game-img img{
     width: 100%;
     height: 100%;
-}
-.game-img img{
-    width: 100%;
-    height: 100%;
+    transition: all 0.5s;
 }
 .game-description{
     display: none;
@@ -218,51 +314,46 @@ background-color: rgba(181, 209, 221, 0.623);
     width: 100%;
     height: 100%;
 
-    
 }
 .game-description h3{
-    color: #EFFFE9;
+    color: rgb(95, 21, 30);
     font-size: 2em;
-    font-weight: 500;
-    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-family: arcade;
     margin: 20px 10px;
     text-align: center;
 
 }
 .game-description p{
     margin: 15px;
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: #222;
+    font-family: neuro;
+}
+.game-description a , .games a{
+    text-decoration: none !important; 
 }
 #trailer{
     display: block;
     margin: 20px auto;
     width: 55%;
-    border: 1px solid rgba(0, 0, 0, 0.63);
-    background-color: rgb(0, 102, 255);
-}
-#trailer:hover{
-    background-color: rgb(179, 199, 230);
-}
-.games a{
-    text-decoration: none;
-}
-
-/***** OVERLAY *****/
-/*.games div p {
-    font-size: 1.5em;
-    text-align: center;
-    margin-top: 113px;
+    background-color: rgb(95, 21, 30);
+    border-color: rgb(95, 21, 30);
     color: white;
     font-weight: 400;
-
-
+    font-size: 1.7em;
+    transition: all 0.5s;
+    font-family: arcade;
+}
+#trailer:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.5);
+}
 /************* CONTACT *************/
 .contact{
 width: 80%;
 margin: auto;
 height: 700px;
-
 }
 .contact-photo{
     width: 40%;
@@ -270,8 +361,8 @@ height: 700px;
     float: left;
 }
 .contact-photo img{
-    width: 70%;
-    margin: 20% 20% 15px;
+    width: 90%;
+    margin: 35% 5%;
     height: 50%;
     box-shadow: 3px 3px 3px #222;
 }
@@ -279,57 +370,63 @@ height: 700px;
     transform: rotateY(360deg);
     transition: all 8s;
 }
-.contact-photo h3{
-    text-align: center;
-    color: #2EC4B6;
-    font-size: 2.5em;
-    font-weight: bold;
-   cursor: pointer; 
- }
- .contact-photo a{
+.contact-photo a{
      text-decoration: none;
- }
- .contact-photo h3:hover{
-     text-decoration: underline;
-     color: rgba(24, 136, 125, 0.836);
- }
- .contact-photo p {
-     text-align: center;
-     color: #EFFFE9;
-     font-size: 2em;
-     cursor: default;
-  }
+}
+.contact-photo p {
+    text-align: center;
+    color: #EFFFE9;
+    font-size: 2em;
+    cursor: default;
+    font-family: game;
+}
 .contact-form{
     width: 60%;
     height: 100%;
     float: right;
-
 }
 .contact-form h2{
     color: #EFFFE9;
     font-size: 2em;
     font-weight: bold;
     text-align: center;
-    padding-top: 50px;
-    font-family: 'Courier New', Courier, monospace;
+    padding-top: 30px;
+    font-family: neuro;
 }
+.contact-form h3{
+    text-align: center;
+    color: rgb(95, 21, 30);
+    font-size: 2.5em;
+    font-weight: bold;
+   cursor: pointer; 
+   font-family: game;
+ }
+ .contact-form h3:hover{
+    color: rgb(10, 63, 58);
+    text-decoration: underline;
+    transition: all 1s;
+ }
 .contact-form p{
-    color: #E71D36;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    font-family: game;
     font-size: 1.5em;
     text-align: center;
-    padding-top: 25px;
-    line-height: 0px;  
+    padding-top: 20px;
+    line-height: 20px;
 }
 .contact-form form{
     margin-top: 40px;
 }
 #button{
-    background-color: rgb(0, 102, 255);
+    background-color: rgb(95, 21, 30);
+    font-family: arcade;
+    font-size: 1.4em;
+    transition: all 0.5s;
+
 }
 #button:hover{
-    background-color: rgb(179, 199, 230);
-
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 .contact-form input , .contact-form textarea {
     display: block;
@@ -337,10 +434,9 @@ height: 700px;
     width: 55%;
     border: 1px solid rgba(0, 0, 0, 0.63);
     background-color: rgba(255, 255, 255, 0.575);
+    font-family: neuro;
+    
 }
-
-
-
 /***************************** Footer  ********************************/
 footer{
 width: 100%;
@@ -371,38 +467,54 @@ height: 100px;
 .footer-info p{
     color: #EFFFE9;
     font-size: 1em;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: neuro;
     text-align: center;
-    }    
+    }  
+/************* about desc *************/  
+@media (max-width: 1380px){
+.about-desc{
+position: absolute;
+bottom: 4%;
+left: 0;
+width: 100%;
+height: fit-content;
+background: rgba(0, 0, 0, 0.5);
+color: #f1f1f1;
+padding: 15px;
+}
+.contact-photo img{
+margin-top: 50%;
 
-
-/*********** medium screen ***********/
+}
+}
+/*********** medium screen Max width = 1090px ***********/
 @media (max-width: 1090px){
+/************* GAMES *************/
+.game-info{
+width: 45%;
+}
 .anim{
 left: 50px;
 animation: push2 ease 10s alternate infinite;
 }
 .games{
-height: 2000px;
+height: 2400px;
+
 }
+/************* Welcome *************/
 .Welcome h2{
  text-align: center;
 }
+/************* contact *************/
 .contact{
 width: 100%;
 }
 /********* about **********/
 .about-us{
     height: 600px;   
-    }
-.competence img{
-    width: 80%;
 }
-.comp-logo{
-    height: 300px;
+/******* just for Animation *****/
 }
-}
-/******* Animation *****/
 @media ( max-width: 960px){
     .Welcome button{
         font-size: 1.1em;
@@ -415,38 +527,54 @@ width: 100%;
     }
     .Welcome h2{
         padding-top: 220px;
-        font-size: 4em;
+        font-size: 2.4em;
        }
+.about-desc h3{
+    font-size: 2em;
 }
-/*********** Small screen ***********/
-@media (max-width: 750px){
-    .Welcome button{
-        font-size: 1em;
-        width: 35%;
-        bottom: 10%;    
+.about-desc p{
+    font-size: 1.3em;
 }
+#myBtn {
+  width: 150px;
+  font-size: 15px;
+
+}
+.login-auth button{
+    width: 60%;
+    margin: 3% 20%;
+    height: 40px;
+}
+}
+/*********** Small screen max width = 790px ***********/
+@media (max-width: 790px){
+/************* Header *************/
 .top-header h1{
-    font-family: wild;
+    font-family: arcade;
     font-size: 2.5em;
     margin-left: 5%;
     margin-top: 28px;
     transform: rotate(347deg);
 }
-.Welcome{
-height: 250px;
+.menu-header ul li{
+    font-size: 1em;
+    margin-top: 19px;
+    margin-left: 10px;
 }
+/************* Welcome *************/
+.Welcome{
+    height: 250px;
+}
+.Welcome button{
+    font-size: 1.3em;
+    width: 45%;
+    bottom: 10%;
+    right: 30%;    
+}
+
 .Welcome h2{
  padding-top: 105px;
- font-size: 2.5em;
-}
-.sticky {
-display: none;
-  }
-
-.menu-header ul li{
-font-size: 1em;
-margin-top: 15px;
-margin-left: 10px;
+ font-size: 1.5em;
 }
 .anim{
     position: absolute;
@@ -454,9 +582,13 @@ margin-left: 10px;
 	left: 0px;
 	width: 100%;
 	height: 100px;
-animation: none;
-
+    animation: none;
 }
+/************* Sticky menu *************/
+.sticky {
+display: none;
+}
+/************* Games *************/
 .games h2{
     font-size: 2em;
 }
@@ -464,54 +596,171 @@ animation: none;
     font-size: 0.75em;
 }
 
-/********* about **********/
-.comp-logo{
-    height: 200px;
-}
+/************* About us *************/
 .about-us{
-
 width: 100%;
 height: 410px;
 text-align: center;
-
 }
 .about-us h2{
     font-size: 2em;
 }
-.education h3 , .competence h3{
-    font-size: 1.25em;
-}
-.education ul li , .competence ul li {
-    font-size: .95em; 
-}
 p{
     font-size: 0.7em;
 }
-.competence img{
-    width: 80%;
+.about-desc{
+    left: 0;
+padding: 12px;
 }
-.competence h4{
+.about-desc h3{
+    font-size: 1.5em;
+}
+.about-desc p{
     font-size: 1em;
 }
+#myBtn {
+  width: 120px;
+  font-size: 15px;
 
-
-.contact-photo img{
-    width: 80%;
-    margin: 35% 10% 15px;
-    height: 40%;
-    box-shadow: 3px 3px 3px #222;
 }
+/************* Contact *************/
 .contact-form input , .contact-form textarea {
     width: 75%;
 }
 .contact-form h2{
     font-size: 1em;
 }
+.contact-form p{
+    font-size: 1em;
+}
+#trailer{
+    display: block;
+    margin: 20px auto;
+    width: 80%;
+    border: 1px solid rgb(95, 21, 30);
+    background-color: rgb(95, 21, 30);
 
+}
+}
+/************* Phone screen *************/
+@media (max-width: 540px){
+/************* Header *************/
+.top-header{
+    width: 100%;
+    height: 80px;
+}
+.top-header img{
+    height: 90px;
+    margin-top: 0px;
+    margin-left: 30%;
+}
+.header {
+    width: 100%;
+    height: 130px; /* 130 */
+    transition: all 1s ease-in-out;
+}
+.style2{
+    height: 280px;
+}
+.menu-header{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 7%;
+    margin: none;
+    float: left;
+    height: 50px;
+    background-color: rgba(34, 34, 34, 0.342);
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+.menu-header img {
+    display: block;
+    margin-top: 10px;
+    height: 30px;
+    cursor: pointer;
+}
+.style1{
+    width: 100%;
+}
+.menu-header ul{
+    padding-left: 5px;
+    line-height: 12px;
+    color: black;
+}
+.menu-header ul li{
+font-size: 1.1em;
+margin-top: 20px;
+margin-left: 5px;
+}
+.login{
+    right: 35px;  
+}
+/************* login *************/
+.login-auth{
+    top: 122px;
+    width: 100%;
+    height: 140px;
+}
+.login-auth input{
+    width: 80%;
+    margin: 2% 10% 1%;
+    background-color: rgba(255, 255, 255, 0.781);
+}
+.login-auth button{
+    width: 45%;
+    margin: 2% 2%;
+}
+/************* Contact *************/
+.contact{
+    width: 80%;
+    margin: auto;
+    height: 950px;
+}
+.contact-photo{
+    width: 100%;
+    height: 30%;
+    float: none;
+}
+.contact-photo img{
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+.contact-form{
+    width: 100%;
+    height: 70%;
+    float: none;
+    margin-top: -20px;
+}
+.contact-form p{
+    font-size: 1.2em; 
+}
+.contact-form h2{
+    font-size: 2em;
+}
 
+.about-desc{
+    bottom: 18%;
+    left: 0;
+padding: 10px;
+}
+.about-desc h3{
+    font-size: 1.2em;
+}
+.about-desc p{
+    font-size: 0.8em;
+    line-height: 14px;
+}
+#myBtn {
+  width: 90px;
+  height: 40px;
+  font-size: 15px;
 
 }
 
+#trailer{
+font-size: 1.4em;
 
-
-
+}
+}

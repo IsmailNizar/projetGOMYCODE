@@ -14,38 +14,58 @@
      <div class="top-header">
       <img src="res/JOKG-Con.png" alt="">
      </div> 
-     <hr>
+
      <div class="menu-header" id="myHeader">
+       <img id="menu-img" src="res/dial.png" alt="" onclick="menu()">
       <ul>
          <a href="#up"><li>HOME</li></a> 
          <a href="#about"><li>ABOUT US</li></a>
          <a href="#port"><li>GAMES</li></a>
          <a href="#contactme"><li>CONTACT</li></a>
       </ul>
+      <div class="login" id="login" onclick="login_show()">
+        <p id="log-btn" >Login</p>
+      </div>
 
      </div>
 
     </header>
-    <div class="main-container">
+    <div class="login-auth">
+     <input type="email" placeholder="Email"  class="form-control">
+     <input type="password" placeholder="Password" class="form-control">
+     <button class="btn btn-primary">Login</button>
+     <a href="SignUp.html"><button class="btn btn-primary">Sign Up</button></a>
+    </div>
+      <div class="main-container">
       <div class="Welcome">
         <div class="anim">
         <h2>We Are Presenting For You The Greatest Games  !</h2>
       </div>
-      <a href="#port"><button>Discover More Games</button></a>
+      <a href="#port"><button >Discover More </button></a>
       </div>
       
       <div class="about-us" id="about">
        <h2>ABOUT US</h2>
-       
+      <div class="motivation">
+          <video paused loop id="myVideo">
+              <source src="res/CS_GO _ eSports MOTIVATION.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+      </div>
+      <div class="about-desc">
+          <h3>Motivation</h3>
+          <p>Our community present a true-gamers community respects all gamers and enjoys gaming just for the fun of it. We just truying to show that true-gamers community does not discriminate themselves between gaming genres and games, and utilities. </p>
+          <button id="myBtn" onclick="videoPlay()">Play</button>
+         </div>
       </div>
 
       <div class="games" id="port" >
          <div class="tittle">
-          <h2>GAMES</h2>
+          <h2>TOPGAMES</h2>
         </div>
           <div class="game-info" onmouseover="show('#assassin-img','#assassin-descp')" onmouseout="hide('#assassin-img','#assassin-descp')">
-           <div class="game-img" id="assassin-img">
-             <img src="res/assassin creed.png" alt="">
+           <div class="game-img" id="assassin-img" >
+             <img src="res/assassin creed.png" alt="" >
            </div>
            <div class="game-description" id="assassin-descp">
               <h3>Assassin's Creed Unity</h3>
@@ -65,81 +85,102 @@
             </div>
           </div>
 
-          <div class="game-info" onmouseover="show()" onmouseout="hide()">
+          <div class="game-info" onmouseover="show('#cs-img','#cs-descp')" onmouseout="hide('#cs-img','#cs-descp')">
             <div class="game-img">
-              <img src="res/csGo.jpg" alt="">
+              <img src="res/csGo.jpg" alt="" id="cs-img">
             </div>
-            <div class="game-description">
-             <h3>Counter-Strike: Global Offensive</h3>
+            <div class="game-description" id="cs-descp">
+             <h3>Counter-Strike: GO</h3>
+             <p>is a multiplayer first-person shooter video game developed by Hidden Path Entertainment and Valve Corporation.The game was praised for its overall gameplay and faithfulness .</p>
+             <a href="https://www.youtube.com/watch?v=edYCtaNueQY" target="_blank"><button class="btn btn-primary" id="trailer">Watch Trailer</button></a>
             </div>
           </div>
 
-          <div class="game-info" onmouseover="show()" onmouseout="hide()">
+          <div class="game-info" onmouseover="show('#wow-img','#wow-descp')" onmouseout="hide('#wow-img','#wow-descp')">
             <div class="game-img">
-
+             <img src="res/wow.png" alt="" id="wow-img">
             </div>
-            <div class="game-description">
- 
+            <div class="game-description" id="wow-descp">
+             <h3>World Of Warcraft</h3>
+             <p>is an online role-playing experience set in the award-winning Warcraft universe. Players assume the roles of Warcraft heroes as they explore, adventure, and quest across a vast world.</p>
+             <a href="https://www.youtube.com/watch?v=jSJr3dXZfcg" target="_blank"><button class="btn btn-primary" id="trailer">Watch Trailer</button></a>
             </div>
           </div>
 
-          <div class="game-info" onmouseover="show()" onmouseout="hide()">
+          <div class="game-info" onmouseover="show('#speed-img','#speed-descp')" onmouseout="hide('#speed-img','#speed-descp')">
             <div class="game-img">
-
+             <img src="res/speed.jpg" alt="" id="speed-img">
             </div>
-            <div class="game-description">
- 
+            <div class="game-description" id="speed-descp">
+              <h3>Need for Speed Payback</h3>
+              <p>is a racing game set in an open world environment of Fortune Valley. It is focused on "action driving" and has three playable characters working together to pull off action.</p>
+              <a href="https://www.youtube.com/watch?v=K-5EdHZ0hBs" target="_blank"><button class="btn btn-primary" id="trailer">Watch Trailer</button></a>
             </div>
           </div>
 
-          <div class="game-info" onmouseover="show()" onmouseout="hide()">
+          <div class="game-info" onmouseover="show('#over-img','#over-descp')" onmouseout="hide('#over-img','#over-descp')">
             <div class="game-img">
-
+            <img src="res/overwatch.jpg" alt="" id="over-img">
             </div>
-            <div class="game-description">
- 
+            <div class="game-description" id="over-descp">
+              <h3>Overwatch</h3>
+              <p>features a wide array of unique heroes, ranging from a time-jumping adventurer, to an armored, rocket-hammer-wielding warrior, to a transcendent robot monk.</p>
+              <a href="https://www.youtube.com/watch?v=FqnKB22pOC0" target="_blank"><button class="btn btn-primary" id="trailer">Watch Trailer</button></a>
             </div>
           </div>
 
-          <div class="game-info" onmouseover="show()" onmouseout="hide()">
+          <div class="game-info" onmouseover="show('#dead-img','#dead-descp')" onmouseout="hide('#dead-img','#dead-descp')">
             <div class="game-img">
-
+             <img src="res/red_dead.png" alt="" id="dead-img">
             </div>
-            <div class="game-description">
- 
+            <div class="game-description" id="dead-descp">
+              <h3>Red Dead Redemption 2</h3>
+              <p> is a Western-themed action adventure game set in an open world environment. It is played from either a third or first-person perspective and the player controls Arthur Morgan.</p>
+              <a href="https://www.youtube.com/watch?v=FqnKB22pOC0" target="_blank"><button class="btn btn-primary" id="trailer">Watch Trailer</button></a>
             </div>
           </div>
 
-          <div class="game-info" onmouseover="show()" onmouseout="hide()">
+          <div class="game-info" onmouseover="show('#last-img','#last-descp')" onmouseout="hide('#last-img','#last-descp')">
             <div class="game-img">
-
+             <img src="res/thelastofus.jpg" alt="" id="last-img">
             </div>
-            <div class="game-description">
- 
+            <div class="game-description" id="last-descp">
+             <h3>The Last Of Us</h3>
+             <p>is an action-adventure survival horror video game. Players control Joel, a smuggler tasked with escorting a teenage girl, Ellie, across a post-apocalyptic United States.</p>
+             <a href="https://www.youtube.com/watch?v=FqnKB22pOC0" target="_blank"><button class="btn btn-primary" id="trailer">Watch Trailer</button></a>
             </div>
           </div>
-          <div class="game-info" onmouseover="show()" onmouseout="hide()">
 
+          <div class="game-info" onmouseover="show('#blackOps-img','#blackOps-descp')" onmouseout="hide('#blackOps-img','#blackOps-descp')">
+            <div class="game-img">
+              <img src="res/blackOps4.jpg" alt="" id="blackOps-img">
+             </div>
+             <div class="game-description" id="blackOps-descp">
+              <h3>COD:Black Ops IIII</h3>
+              <p> is a first-person shooter developed by Infinity Ward and published by Activision.The game breaks away from the World War II setting of previous entries in the series and is instead set in modern times. </p>
+              <a href="https://www.youtube.com/watch?v=_GQsd06eP9M" target="_blank"><button class="btn btn-primary" id="trailer">Watch Trailer</button></a>
+             </div>
           </div>
  
        </div>
 
        <div class="contact" id="contactme">
           <div class="contact-photo">
-            <img src="res/gamers.jpg" alt="Me" title="Ismail" class="img-circle">
-            <h3 routerLink="/">GAMERS</h3>
-             <p>Community</p>
+            <img src="res/gamers.jpg" alt="GamersCommunity" title="GamersCommunity" class="img-circle">
+            
           </div>
           <div class="contact-form">
             <h2>CONTACT</h2>
-            <p>Sousse , Tunisie</p>
-            <p>gamer.community@gaming.com</p>
-            <p>+216 ** *** ***</p>
+            <h3 routerLink="/">We Want You To</h3>
+             <p>Give us a suggestion about your best game</p>
+             <!-- <div class="alert alert-success">
+              <strong>Success!</strong> This alert box could indicate a successful or positive action.
+            </div> -->
             <form >
-            <input type="text" title="Your Name" placeholder="Name " id="name" >
-            <input type="email" title="Your Email" placeholder="Email" id="email"  >
-            <input type="text" title="Object" placeholder="Object " id="object" >
-            <textarea id="Message" cols="30" rows="8" placeholder="Message "></textarea>
+            <input type="text" title="Your Name" placeholder="Name " id="name" class="form-control" >
+            <input type="email" title="Your Email" placeholder="Email" id="email"  class="form-control">
+            <input type="text" title="Object" placeholder="Game " id="game" class="form-control">
+            <textarea id="message" cols="30" rows="8" placeholder="Why this game " class="form-control"></textarea>
           <input type="reset" value="Clear" class="btn btn-primary" id="button">
         </form>
         <input type="submit" value="Send" class="btn btn-primary" id="button" onclick="upload()">
@@ -160,10 +201,12 @@
      </div>
      <div class="footer-info">
         ​<p>©2018-2019 by JustGamers .</p>
-     </div>
+     </div> 
 
     </footer>
 </body> 
+<script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/bootstrap.js"></script>  
 <script src="js/main.js"></script>
 </html>
